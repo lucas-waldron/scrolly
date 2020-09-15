@@ -26,12 +26,13 @@
 
       .step.is-active {
         color: blue;
+        font-size: 2rem;
       }
 
       .step p {
         text-align: center;
         padding: 1rem;
-        font-size: 1.5rem;
+        //font-size: 1.5rem;
       }
     </style>
   </head>
@@ -82,6 +83,7 @@
         // add to color to current step
         response.element.classList.add("is-active");
       }
+        
 
       function handleStepExit(response) {
         // response = { element, direction, index }
@@ -89,6 +91,7 @@
         // remove color from current step
         response.element.classList.remove("is-active");
       }
+        
 
       function init() {
         // set random padding for different step heights (not required)
@@ -106,6 +109,7 @@
             debug: true,
             offset: 0.5
           })
+          
           .onStepEnter(handleStepEnter)
           .onStepExit(handleStepExit);
 
